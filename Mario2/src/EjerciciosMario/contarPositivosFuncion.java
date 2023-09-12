@@ -7,7 +7,7 @@ public class contarPositivosFuncion {
 
         //Una funcion para crear un array, la funcion devuelve el array al main 
         // Otra funcion para contar los positivos, devuelve un entero
-        // Otra funcion para contar los negativos, devuelve un entero
+        // Otra funcion para contar losgit add  negativos, devuelve un entero
         // Otra funcion para contar los ceros, devuelve un entero
     }
 }
