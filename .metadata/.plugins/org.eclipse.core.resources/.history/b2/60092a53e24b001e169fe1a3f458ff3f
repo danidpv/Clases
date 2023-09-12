@@ -1,0 +1,28 @@
+package EjerciciosMario;
+
+public class Repaso {
+	/*Arrays
+	  Crear un array de 50 elementos, con valores enteros aleatorios entre -10 y +10
+	  Recorrer el array y contar elementos positivos, negativos y ceros tiene
+	*/
+	public static void main(String[] args) {
+		int[] miArray = new int[60]; //Declaramos y instanciamos el array asignandole valor
+		//Creamos los contadores de positivos, negativos y ceros
+		int positivos =0;
+		int negativos=0;
+		int ceros=0;
+		for(int i =0; i<miArray.length;i++) {//Recorremos el array con un for y el .length
+			miArray[i]=(int)(Math.random()*21);
+			if(miArray[i]==0) {
+				ceros++;
+			}else if(miArray[i]<0) {
+				negativos++;
+			}else if(miArray[i]>0) {
+				positivos++;
+			}
+		}
+		System.out.println("Elementos positivos : "+ positivos);
+		System.out.println("Elementos negativos : "+ negativos);
+		System.out.println("Elementos iguales a 0 : "+ ceros);
+	}
+}

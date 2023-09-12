@@ -1,0 +1,14 @@
+package EjerciciosMario;
+
+public class Aplicacion {
+  	
+ /*Clase Aplicacion
+ 	Datos: 
+ 		Nombre aplicacion, version
+ 	Operaciones:
+ 		Solicitar datos,insertar datos,cerrar sesion*/
+	
+	private String nombreAplicacion;
+	private int version;
+	
+}

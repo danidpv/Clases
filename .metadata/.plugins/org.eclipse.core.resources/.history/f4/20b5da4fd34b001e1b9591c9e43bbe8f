@@ -1,0 +1,12 @@
+package EjerciciosMario;
+
+public class UsaPersona {
+
+	public static void main(String[] args) {
+		// Instanciamos clase direccion
+		
+		Direccion direccion = new Direccion("calle 1", "sevilla", 11458);
+		
+	}
+
+}

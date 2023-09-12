@@ -1,0 +1,12 @@
+package EjerciciosMario;
+
+public class mainBD {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//String nombreAplicacion, int version,String direccion, String puerto, String nombreUsuario, String password
+		Aplicacion a = new Aplicacion("eclipse",3,"433.555.444.222",6,"Daniel","clases");
+		a.Actualizar("Se ha actualizado el nombre");
+	}
+
+}

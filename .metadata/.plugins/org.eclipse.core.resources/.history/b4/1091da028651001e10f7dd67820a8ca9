@@ -1,0 +1,16 @@
+package EjerciciosMario;
+
+public class BD {
+	/*
+Objetos
+ Clase BD
+  Operaciones:
+	*Consultar,insertar,actualizar,eliminar
+  Datos:
+  	Direccion IP, puerto, nombreusuario,passwd*/
+	
+	private String Direccion;
+	private String Puerto;
+	private String nombreUsuario;
+	private String password;
+}
