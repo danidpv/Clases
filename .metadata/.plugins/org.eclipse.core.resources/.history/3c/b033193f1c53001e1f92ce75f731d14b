@@ -53,13 +53,6 @@ public static void mostrarArray(int []arr) {
 	System.out.println("Array completado");
 	mostrarArray(arr);
 	System.out.println(" ");
-	int positivos= positivos(arr);
-	int negativos =negativos(arr);
-	int ceros=ceros(arr);
-	
-	System.out.println("Numeros positivos " + positivos);
-	System.out.println("Numeros negativos "+ negativos);
-	System.out.println("Numeros a cero " + ceros);
 	
 	}
 

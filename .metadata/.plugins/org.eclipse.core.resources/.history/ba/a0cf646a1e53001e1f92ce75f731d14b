@@ -1,0 +1,23 @@
+package EjerciciosMario;
+
+import java.util.Scanner;
+
+public class NumeroFactorial {
+	public static int Factorial(int n) {
+		if(n==0 || n==1) {
+			return 1;
+		}else {
+			for(int i =n;i>1;i--) {
+				int calculo=1;
+				calculo *=n;
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner entrada = new Scanner(System.in);
+	}
+
+}
