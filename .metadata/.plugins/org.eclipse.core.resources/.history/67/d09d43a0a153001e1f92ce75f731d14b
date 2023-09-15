@@ -1,0 +1,22 @@
+package EjerciciosMario;
+
+import java.util.Scanner;
+
+public static boolean Palindromo(String cad) {
+	String cad = false;
+	
+}
+
+
+public class palindromo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Introduce una palabra");
+		String p=entrada.next();
+		
+		
+	}
+
+}

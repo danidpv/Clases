@@ -14,6 +14,7 @@ public class NumeroFactorial {
 		}
 		return calculo;
 	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner entrada = new Scanner(System.in);
@@ -21,4 +22,5 @@ public class NumeroFactorial {
 		int numero = entrada.nextInt();	
 		System.out.println("El numero factorial de "+ numero + " es " + Factorial(numero));
 	}
+
 }

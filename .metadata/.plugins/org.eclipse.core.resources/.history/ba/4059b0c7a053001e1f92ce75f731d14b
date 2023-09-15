@@ -1,0 +1,16 @@
+package EjerciciosMario;
+
+public static boolean Palindromo(String cadena) {
+	
+}
+
+
+public class palindromo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner entrada = new Scanner(System.in);
+		
+	}
+
+}
