@@ -2,29 +2,25 @@ package EjerciciosMario;
 
 import java.util.Scanner;
 
-public class palindromo {
+public class Palindromo {
 	public static boolean Palindromo(String cad) {
-		String cadena="";
-		boolean cad2;
-		if(cad != cadena) {
-			cad2=false;
-		}else {
-			for(int i =cadena.length()-1; i>=0;i--) {
-				cad+=cadena.charAt(i);
-			}
-			cad2=true;
+		String cadenaInvertida="";
+		for(int i = cad.length()-1; i>=0;i--) {
+			System.out.println(cad.charAt(i));
+			cadenaInvertida+=cad.charAt(i);
 		}
-		return cad2;
+		System.out.println("Cadena invertida: "+cadenaInvertida);
+		if(cadenaInvertida.equals(cad)) {
+			return true;
+		}else {
+			return false;
+		}
 	}
-
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner entrada = new Scanner(System.in);
 		System.out.println("Introduce una palabra");
-		String p=entrada.next();
-		String resultado = p;
-		
-		System.out.println("La palabra : " + p + " es = " + Palindromo(resultado));
+		String cadenaOrignal = entrada.next();
+		System.out.println("La palabra : " + cadenaOrignal + " es palindromo ? " + Palindromo(cadenaOrignal));
 	}
 
 }
