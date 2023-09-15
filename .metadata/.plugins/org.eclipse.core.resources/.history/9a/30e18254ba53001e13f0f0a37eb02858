@@ -23,7 +23,6 @@ public class palindromo {
 		System.out.println("Introduce una palabra");
 		String p=entrada.next();
 		String resultado = p;
-		
 		System.out.println("La palabra : " + p + " es = " + Palindromo(resultado));
 	}
 
