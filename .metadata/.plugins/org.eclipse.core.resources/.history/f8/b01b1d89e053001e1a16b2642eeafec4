@@ -1,0 +1,15 @@
+package EjerciciosMario;
+
+import java.util.Scanner;
+
+public class ContarVocales {
+	public static String Contar(String cad) {
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner entrada = new Scanner(System.in);
+		System.out.println("Introduce una palabra");
+	}
+
+}

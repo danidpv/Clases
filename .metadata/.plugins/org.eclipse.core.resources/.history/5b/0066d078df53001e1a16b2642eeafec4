@@ -7,9 +7,8 @@ public class palindromo {
 		String cadena="";
 		boolean esPalindromo;
 			for(int i =cad.length()-1; i>=0;i--) {
-				cadena+=cad.charAt(i);
 			}
-			if(cadena.equals(cad)) {
+			if(cad.equals(cadena)) {
 				return true;
 			}else {
 				return false;
