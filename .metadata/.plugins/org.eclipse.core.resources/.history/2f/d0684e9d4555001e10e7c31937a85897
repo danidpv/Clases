@@ -1,0 +1,18 @@
+package colecciones;
+
+import java.util.HashMap;
+
+public class mainPersona {
+
+	public static void main(String[] args) {
+		HashMap<String, Float> Cuentas = new HashMap<>();
+		Cuentas.put("111",  854f);
+		
+		Persona p = new Persona("Manolo", 17, "Sevilla", Cuentas);
+		
+		p.anadir("545454", 500);
+		
+		System.out.println(p.getCuentas());
+		
+	}
+}

@@ -1,0 +1,12 @@
+package colecciones;
+
+import java.util.HashMap;
+
+public class mainPersona {
+
+	public static void main(String[] args) {
+		HashMap<String, String> Cuentas = new HashMap<>();
+		Persona p = new Persona("Manolo", 17, "Sevilla", Cuentas);
+	}
+
+}
