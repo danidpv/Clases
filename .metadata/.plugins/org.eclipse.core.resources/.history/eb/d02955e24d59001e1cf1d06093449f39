@@ -7,7 +7,7 @@ public class Persona {
 	 private String nombre;
 	 private int edad;
 	 private String direccion;
-	 private HashMap<String, Float> Cuentas = new HashMap<>();//Creamos un map
+	 private HashMap<String, Float> Cuentas = new HashMap<>();
 			
 	// Operaciones para consultar, añadir cuentas corrientes dentro de la clase
 	public Persona(String nombre, int edad, String direccion, HashMap<String, Float> cuentas) {
