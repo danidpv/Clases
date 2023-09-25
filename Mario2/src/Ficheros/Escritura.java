@@ -19,11 +19,10 @@ public class Escritura {
         	
         	bf.close();//Cerrar el flujo
         	fw.close();//Cerrar fichero.
-        	System.out.println("Escritura terminada");
-        	
-        }catch(IOException e) {
+        	System.out.println("Escritura terminada");	
+        }
+        catch(IOException e) {
         	System.out.println("No se ha podido crear el fichero");
-
         }
     }
 }
