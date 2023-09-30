@@ -46,8 +46,9 @@ public class Lecturas {
 						System.out.println("El total son : " +cont);
 						lectura.close();
 						fr.close();
-						bf.close();//Cerrar el flujo primero se cierra antes el flujo y luego el fichero
 						fw2.close();//Cerrar fichero.
+						bf.close();//Cerrar el flujo
+			        	
 							} catch (IOException e) {
 								e.printStackTrace();
 							}
