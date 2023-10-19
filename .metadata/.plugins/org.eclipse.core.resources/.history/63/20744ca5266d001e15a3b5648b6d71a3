@@ -1,0 +1,36 @@
+package colecciones;
+
+import java.util.HashMap;
+
+public class Conversion {
+	
+	
+	public static void main(String[] args) {
+		//Validar numero binario
+		//Validar numero hexadecimal
+		HashMap <Character, String> HexToBin = new HashMap<Character, String>();
+		HexToBin.put('0', "0000");
+		HexToBin.put('1', "0001");
+		HexToBin.put('2', "0010");
+		HexToBin.put('3', "0011");
+		HexToBin.put('4', "0100");
+		HexToBin.put('4', "0101");
+		HexToBin.put('5', "0110");
+		HexToBin.put('6', "1000");
+		HexToBin.put('7', "1001");
+		HexToBin.put('8', "1010");
+		HexToBin.put('9', "1110");
+		HexToBin.put('A', "1101");
+		HexToBin.put('B', "1011");
+		HexToBin.put('C', "1100");
+		HexToBin.put('D', "1101");
+		HexToBin.put('E', "1110");
+		HexToBin.put('F', "1111");
+		System.out.println("Elige una opcion");
+		System.out.println("1- Hexadecimal a binario");
+		System.out.println("2- Binario a Hexadecimal");
+		int opcion= entrada.nextint
+		
+	}
+	
+}

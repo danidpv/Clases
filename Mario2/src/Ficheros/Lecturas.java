@@ -38,6 +38,7 @@ public class Lecturas {
 								//System.out.println(palabra);
 								cont ++;
 								fw2.write(palabra);
+								bf.flush();//Limpia la basura del flujo
 								bf.newLine();
 							}
 						}

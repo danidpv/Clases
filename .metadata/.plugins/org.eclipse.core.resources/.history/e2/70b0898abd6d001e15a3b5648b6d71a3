@@ -1,0 +1,138 @@
+package colecciones;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class ConversionesHexBin {
+
+	public static String toBinary(HashMap <Character,String> HexToBin,String cadHex) throws Exception {
+		String resultado = "";
+		for(int i = 0;i<cadHex.length();i++) {
+			 if(cadHex.charAt(i)<'0' || cadHex.charAt(i)>'F' || cadHex.charAt(i)>' ' ) {
+				 throw new Exception("Caracter invalido");
+			 }
+		}
+		for(int i = 0 ;i<cadHex.length();i++) {
+			resultado += HexToBin.get(cadHex.charAt(i));
+		}
+		return resultado;
+	}
+	public static String toHex (HashMap <String,Character> BinToHex,String cadBin) throws Exception {
+		String resultado  = "";
+		String binParcial = "";
+		//1001 1111
+		if(cadBin.length()%4!=0) {
+			throw new Exception("Logintud invalida");
+		}
+		for(int i = 0;i<cadBin.length();i++) {
+			 if(cadBin.charAt(i)<'0' || cadBin.charAt(i)>'1' || cadBin.charAt(i)>' ' ) {
+				 throw new Exception("Caracter invalido");
+			 }
+		}
+		for(int i = 0; i<cadBin.length();i+=4) {
+		
+			//Si i = 0 => Obtenemos caracteres 0-3 => 1001
+			//Si i = 4 => Obtenemos caracteres 4-7 => 1111
+			if((i+4)==cadBin.length()) {
+				binParcial = cadBin.substring(i, cadBin.length());
+			}else {
+				binParcial = cadBin.substring(i, (i+4));
+			}
+			resultado+=BinToHex.get(binParcial);
+		}
+		return resultado;
+	}
+	public static void main(String[] args) {
+	  Scanner entrada = new Scanner(System.in);
+	  HashMap <Character,String> HexToBin = new HashMap<Character,String>();
+	  HexToBin.put('0', "0000");
+	  HexToBin.put('1', "0001");
+	  HexToBin.put('2', "0010");
+	  HexToBin.put('3', "0011");
+	  HexToBin.put('4', "0100");
+	  HexToBin.put('5', "0101");
+	  HexToBin.put('6', "0110");
+	  HexToBin.put('7', "0111");
+	  HexToBin.put('8', "1000");
+	  HexToBin.put('9', "1001");
+	  HexToBin.put('A', "1010");
+	  HexToBin.put('B', "1011");
+	  HexToBin.put('C', "1100");
+	  HexToBin.put('D', "1101");
+	  HexToBin.put('E', "1110");
+	  HexToBin.put('F', "1111");
+	  HashMap<String,Character> BinToHex = new HashMap <String,Character>();
+	  BinToHex.put("0000", '0');
+	  BinToHex.put("0001", '1');
+	  BinToHex.put("0010", '2');
+	  BinToHex.put("0011", '3');
+	  BinToHex.put("0100", '4');
+	  BinToHex.put("0101", '5');
+	  BinToHex.put("0110", '6');
+	  BinToHex.put("0111", '7');
+	  BinToHex.put("1000", '8');
+	  BinToHex.put("1001", '9');
+	  BinToHex.put("1010", 'A');
+	  BinToHex.put("1011", 'B');
+	  BinToHex.put("1100", 'C');
+	  BinToHex.put("1101", 'D');
+	  BinToHex.put("1110", 'E');
+	  BinToHex.put("1111", 'F');
+	
+	  System.out.println();
+	  /*
+	  String cadBin = "1110001100101101";
+	  String binParcial = "";
+	  
+	  for(int i = 0; i<cadBin.length();i+=4) {
+			//Si i = 0 => Obtenemos caracteres 0-3 => 1001
+			//Si i = 4 => Obtenemos caracteres 4-7 => 1111
+			if((i+4)==cadBin.length()) {
+				binParcial = cadBin.substring(i, cadBin.length());
+				System.out.println("BinParcial: "+binParcial );
+			}else {
+				binParcial = cadBin.substring(i, (i+4));
+				System.out.println("BinParcial: "+binParcial );
+			}
+			System.out.println(BinToHex.get(binParcial));
+		}
+		*/
+	  
+	  System.out.println("Elige una opcion: ");
+	  System.out.println("1- Hexadecimal a binario ");
+	  System.out.println("2- Binario a Hexadecimal");
+	  int opcion = entrada.nextInt();
+	  switch(opcion) {
+		  case 1:
+			  //Pedir al usuario
+			
+			  String cadHex = "ABC";
+				try {
+					System.out.println(toBinary(HexToBin,cadHex));
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			  //Convertir a binario
+			  break;
+		  case 2:
+			  //Pedir al usuario 
+			  
+			  
+			  String cadBin = "10111101";// => 9F
+				try {
+					System.out.println(toHex(BinToHex,cadBin));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					System.err.println(e.getMessage());
+				}
+			  //Convertir a hexadecimal
+			  break;
+		  default:
+			  System.out.println("Opcion invalida");
+			  break;
+	  }
+	 
+	}
+
+}
+

@@ -1,0 +1,23 @@
+package Ficheros;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class MaximoMinimo {
+
+	public static void main(String[] args) {
+		int maximo;//Variable Maximo
+		int minimo;//Variable Minimo
+		int resultado;//Variable del resultado para escribirlo en un fichero
+		
+		try {
+			FileReader fr = new FileReader("numeros.txt");//Leer numeros.txt
+			BufferedReader lectura = new BufferedReader(fr);//Abrir el flujo
+			
+		}catch(IOException e){
+			
+		}
+	}
+
+}

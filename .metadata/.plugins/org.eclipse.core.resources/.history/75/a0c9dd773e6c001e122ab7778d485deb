@@ -1,0 +1,17 @@
+package colecciones;
+
+import java.util.HashMap;
+
+public class Conversion {
+
+	public static void main(String[] args) {
+		//Validar numero binario
+		//Validar numero hexadecimal
+		HashMap <Character, String> HexToBin = new HashMap<Character, String>();
+		HexToBin.put('0', "0000");
+		
+		
+		
+	}
+	
+}
