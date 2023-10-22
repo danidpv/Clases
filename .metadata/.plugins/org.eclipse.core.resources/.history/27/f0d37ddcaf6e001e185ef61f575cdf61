@@ -2,6 +2,7 @@ package Ficheros;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 
 public class MaximoMinimo {
@@ -14,10 +15,10 @@ public class MaximoMinimo {
 		try {
 			FileReader fr = new FileReader("numeros.txt");//Leer numeros.txt
 			BufferedReader lectura = new BufferedReader(fr);//Abrir el flujo
+			FileWriter fw = new FileWriter("resultado_numeros.txt");
+			BufferedWriter bf = new BufferedWriter(fw);
 			
 		}catch(IOException e){
-			
 		}
 	}
-
 }

@@ -1,0 +1,16 @@
+package Ficheros;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class lecturaApellidos {
+	Scanner entrada = new Scanner(System.im);
+	try {
+		FileReader fr = new FileReader("mi_fichero_escritura.txt");
+		BufferedReader lectura = new BufferedReader(fr);
+		
+		FileWriter fw2 = new FileWriter("palabras_de_9.txt"); 
+    	BufferedWriter bf = new BufferedWriter(fw2);
+}

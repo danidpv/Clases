@@ -1,0 +1,137 @@
+package colecciones;
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class ConversionesHexBin {
+
+	public static String toBinary(HashMap <Character,String> HexToBin,String cadHex) throws Exception {
+		//Metodo para convertir a binario.
+		String resultado = "";//Variable string vacia para guardar el resultado
+		for(int i = 0;i<cadHex.length();i++) {//Con un for recorremos cadhex al completo y la incrementamos
+			 if(cadHex.charAt(i)<'0' || cadHex.charAt(i)>'F' || cadHex.charAt(i)==' ' ) {//Decimos que si cadhex de i es menor a 0 etc..
+			//O que si es mayor a f o si es caracter vacio.. Hacemos esto para validar las respuestas	 
+				 throw new Exception("Caracter invalido");
+			 }
+		}
+		for(int i = 0 ;i<cadHex.length();i++) {//Con for recorremos la cADENA
+			resultado += HexToBin.get(cadHex.charAt(i));//Decimos que la variable resultado es igual al charat de i recorrido en el for
+		}
+		return resultado;//Y devolvemos el resultado.
+	}//La conversion a hexadecimal es algo mas complicada.
+	public static String toHex (HashMap <String,Character> BinToHex,String cadBin) throws Exception {//Metodo estatico con parametros.
+		String resultado  = "";//Una variable para el resultado
+		String binParcial = "";//Una variable para la conversion
+		//1001 1111
+		if(cadBin.length()%4!=0) {//Si cadbin su resto es distinto o igual a 0 lanza una excepcion
+			throw new Exception("Logintud invalida");
+		}
+		for(int i = 0;i<cadBin.length();i++) {//Recorremos cadbin y la incrementamos
+			 if(cadBin.charAt(i)<'0' || cadBin.charAt(i)>'1' || cadBin.charAt(i)==' ') {//Hacemos validaciones
+				
+				 throw new Exception("Caracter invalido");
+				
+			 }
+		}
+		for(int i = 0; i<cadBin.length();i+=4) {/*Explicacion procedimiento: Para sacar un numero hexadecimal a binario la conversion
+		se debe hacer en modulos de 4 numeros de 0 y 1, entonces en el for lo recorremos sumando 4 para que valla por los 4 indices
+		*/
+			//Si i = 0 => Obtenemos caracteres 0-3 => 1001
+			//Si i = 4 => Obtenemos caracteres 4-7 => 1111
+			if((i+4)==cadBin.length()) {//Este if es para el tramo final de la conversion
+				binParcial = cadBin.substring(i, cadBin.length());
+			}else {//En este else es para la conversion pero no para el final de la conversion
+				binParcial = cadBin.substring(i, (i+4));
+			}
+			resultado+=BinToHex.get(binParcial);
+		}
+		return resultado;//retornamos nuestra variable con los resultados.
+	}
+	public static void main(String[] args) {
+		//Para realizar la conversion de hexadecimal a binario, primero lo mas sencillo es escribir todos sus resultados
+	  Scanner entrada = new Scanner(System.in);//Pedimos por pantalla y que lo introduzca el usuario
+	  HashMap <Character,String> HexToBin = new HashMap<Character,String>();//Creamos nuestro map con nombre clave.
+	  HexToBin.put('0', "0000");//Añadimos los valores.
+	  HexToBin.put('1', "0001");
+	  HexToBin.put('2', "0010");
+	  HexToBin.put('3', "0011");
+	  HexToBin.put('4', "0100");
+	  HexToBin.put('5', "0101");
+	  HexToBin.put('6', "0110");
+	  HexToBin.put('7', "0111");
+	  HexToBin.put('8', "1000");
+	  HexToBin.put('9', "1001");
+	  HexToBin.put('A', "1010");
+	  HexToBin.put('B', "1011");
+	  HexToBin.put('C', "1100");
+	  HexToBin.put('D', "1101");
+	  HexToBin.put('E', "1110");
+	  HexToBin.put('F', "1111");
+	  
+	  HashMap<String,Character> BinToHex = new HashMap <String,Character>();//Creamos otro mapa con nombre clave de binario a hexadecimal
+	  BinToHex.put("0000", '0');
+	  BinToHex.put("0001", '1');
+	  BinToHex.put("0010", '2');
+	  BinToHex.put("0011", '3');
+	  BinToHex.put("0100", '4');
+	  BinToHex.put("0101", '5');
+	  BinToHex.put("0110", '6');
+	  BinToHex.put("0111", '7');
+	  BinToHex.put("1000", '8');
+	  BinToHex.put("1001", '9');
+	  BinToHex.put("1010", 'A');
+	  BinToHex.put("1011", 'B');
+	  BinToHex.put("1100", 'C');
+	  BinToHex.put("1101", 'D');
+	  BinToHex.put("1110", 'E');
+	  BinToHex.put("1111", 'F');
+	  System.out.println();
+	  String cadBin = "1110001100101101";
+	  String binParcial = "";
+	  
+	  for(int i = 0; i<cadBin.length();i+=4) {
+			//Si i = 0 => Obtenemos caracteres 0-3 => 1001
+			//Si i = 4 => Obtenemos caracteres 4-7 => 1111
+			if((i+4)==cadBin.length()) {
+				binParcial = cadBin.substring(i, cadBin.length());
+				System.out.println("BinParcial: "+binParcial );
+			}else {
+				binParcial = cadBin.substring(i, (i+4));
+				System.out.println("BinParcial: "+binParcial );
+			}
+			System.out.println(BinToHex.get(binParcial));
+		}
+	  System.out.println("Elige una opcion: ");
+	  System.out.println("1- Hexadecimal a binario ");
+	  System.out.println("2- Binario a Hexadecimal");
+	  int opcion = entrada.nextInt();
+	  switch(opcion) {//Creamos un "menu" con cada caso para sacar los resultados.
+		  case 1:
+			  //Pedir al usuario
+			  String cadHex = "ABC";
+				try {
+					System.out.println(toBinary(HexToBin,cadHex));
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			  break;
+			  //Convertir a binario
+		  case 2:
+			  //Pedir al usuario
+			  String cadBin1 = "10111101";// => 9F
+				try {
+					System.out.println(toHex(BinToHex,cadBin1));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					System.err.println(e.getMessage());
+				}
+			  //Convertir a hexadecimal
+			  break;
+		  default:
+			  System.out.println("Opcion invalida");
+			  break;
+	  }
+	}
+
+}//Con un do while pedir al usuario que lo ingrese por pantalla y en el while comprobar que la cadena sea valida
+

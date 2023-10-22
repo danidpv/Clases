@@ -1,0 +1,30 @@
+package Ficheros;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class lecturaApellidos {
+	Scanner entrada = new Scanner(System.in);
+	String linea = "";
+	
+	try {
+		FileReader fr = new FileReader("Apellidos.txt");
+		BufferedReader lectura = new BufferedReader(fr);
+		
+		FileWriter fw2 = new FileWriter(".txt"); 
+    	BufferedWriter bf = new BufferedWriter(fw2);
+    	try {
+			while((linea = lectura.readLine())!=null) {
+			CadenaCompleta += linea+ " "; /
+			}
+}
+    	catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+

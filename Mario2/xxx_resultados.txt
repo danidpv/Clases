@@ -1,0 +1,4 @@
+
+
+Las veces que coinciden son : 8
+La letra introducida es : null
